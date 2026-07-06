@@ -115,16 +115,25 @@ parametro{
     bottom: 30px;
 }
 .fraca{
+    height: 30px;
     width: 25%;
-    background-color: #E71B32; 
+    background-color: #ff3c00; 
+    position: relative;
+    bottom: 30px;
 }
 .media{
-    background-color: #FAF408;
+    height: 30px;
+    background-color: #61ffff;
     width: 50%;
+    position: relative;
+    bottom: 30px;
 }
 .forte{
-    background-color: #00FF85;
+    height: 30px;
+    background-color: #88ff00;
     width: 100%;
+    position: relative;
+    bottom: 30px;
 }
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha{
