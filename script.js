@@ -6,7 +6,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Ao sair da escola, você percebe que existe uma grande quantidade de lixo espalhada pelas ruas. Você pensa em como a tecnologia poderia ajudar nessa situação. O que você faria?",
+        enunciado: "Como a inteligência artificial pode ajudar o meio ambiente?",
         alternativas: [
             {
                 texto: "Criaria sensores inteligentes para identificar locais com muito lixo e ajudar na coleta.",
