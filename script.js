@@ -6,71 +6,71 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Como a inteligência artificial pode ajudar o meio ambiente?",
+        enunciado: "Você precisa entregar um trabalho escolar importante e descobre uma nova ferramenta de Inteligência Artificial que gera textos prontos. Como você decide usá-la?",
         alternativas: [
             {
-                texto: "Criaria sensores inteligentes para identificar locais com muito lixo e ajudar na coleta.",
-                afirmacao: "Você acredita que a tecnologia pode ajudar a tornar as cidades mais limpas e organizadas."
+                texto: "Utilizo a IA para pesquisar o tema e organizar ideias, mas escrevo o texto final com minhas próprias palavras.",
+                afirmacao: "Você enxerga a tecnologia como uma ferramenta de apoio para aprimorar seu próprio aprendizado."
             },
             {
-                texto: "Participaria de um mutirão de limpeza e incentivaria outras pessoas a cuidar do meio ambiente.",
-                afirmacao: "Você acredita que as atitudes das pessoas são fundamentais para preservar o meio ambiente."
+                texto: "Peço para a IA gerar o texto completo e entrego a resposta para otimizar meu tempo.",
+                afirmacao: "Você prefere priorizar a praticidade e a automação de tarefas no seu dia a dia."
             }
         ]
     },
 
     {
-        enunciado: "Sua escola decidiu criar um projeto para economizar energia. Qual tecnologia você escolheria para ajudar?",
+        enunciado: "Sua escola abre inscrições para uma feira de tecnologia do futuro. Qual projeto você gostaria de desenvolver com seus colegas?",
         alternativas: [
             {
-                texto: "Instalaria sensores que desligam as luzes automaticamente quando ninguém está na sala.",
-                afirmacao: "Você acredita que tecnologias inteligentes podem reduzir o desperdício de energia."
+                texto: "Um tutor virtual interativo que ajuda alunos com dificuldades no aprendizado de forma personalizada.",
+                afirmacao: "Você valoriza soluções educacionais que tornam o conhecimento acessível para diferentes pessoas."
             },
             {
-                texto: "Usaria painéis solares para produzir energia limpa para a escola.",
-                afirmacao: "Você acredita que fontes de energia renovável são importantes para um futuro mais sustentável."
+                texto: "Um aplicativo com jogos interativos que torna as aulas mais divertidas e engajadoras.",
+                afirmacao: "Você acredita que a gamificação e o entretenimento são essenciais para transformar a educação."
             }
         ]
     },
 
     {
-        enunciado: "Durante uma pesquisa, você descobre que alguns aparelhos eletrônicos são descartados de maneira incorreta e podem causar impactos ambientais. O que você faria com um celular antigo?",
+        enunciado: "Em uma conversa sobre o futuro do trabalho, um colega afirma que robôs e IAs vão substituir todas as profissões humanas. Qual é a sua opinião?",
         alternativas: [
             {
-                texto: "Levaria o celular para um ponto de coleta de lixo eletrônico.",
-                afirmacao: "Você entende que o descarte correto dos eletrônicos ajuda a diminuir os danos ao meio ambiente."
+                texto: "Novas tecnologias vão automatizar tarefas, mas profissões que exigem criatividade, empatia e ética continuarão humanas.",
+                afirmacao: "Você enxerga o futuro como uma colaboração entre humanos e máquinas, destacando nossas habilidades únicas."
             },
             {
-                texto: "Guardaria o celular em casa, mesmo sem utilizá-lo, para evitar jogá-lo no lixo comum.",
-                afirmacao: "Você se preocupa com o descarte dos eletrônicos e procura evitar que eles sejam jogados no lixo comum."
+                texto: "Muitas profissões tradicionais vão desaparecer, por isso devemos nos focar desde já em aprender programação e dados.",
+                afirmacao: "Você foca na adaptação técnica rápida para se destacar em um mercado dominado pela tecnologia."
             }
         ]
     },
 
     {
-        enunciado: "Uma empresa criou uma inteligência artificial capaz de analisar imagens de florestas e identificar áreas que estão sendo desmatadas. Como você acha que essa tecnologia deveria ser utilizada?",
+        enunciado: "Você descobre que imagens e vozes produzidas por IA estão sendo usadas para espalhar informações falsas na internet. O que você faz?",
         alternativas: [
             {
-                texto: "Para monitorar as florestas e identificar rapidamente áreas de desmatamento.",
-                afirmacao: "Você acredita que a inteligência artificial pode ser uma importante aliada na proteção das florestas."
+                texto: "Busco sempre checar as fontes das notícias antes de compartilhar qualquer conteúdo suspeito.",
+                afirmacao: "Você demonstra responsabilidade digital e senso crítico diante do impacto da desinformação."
             },
             {
-                texto: "Com cuidado, pois a tecnologia deve ser utilizada junto com profissionais que conheçam o meio ambiente.",
-                afirmacao: "Você acredita que a tecnologia pode ajudar, mas que as decisões devem contar com a participação de especialistas."
+                texto: "Incentivo a criação de leis e ferramentas capazes de identificar e punir o uso indevido de IA.",
+                afirmacao: "Você defende a regulamentação ética para garantir a segurança no uso de novas tecnologias."
             }
         ]
     },
 
     {
-        enunciado: "Imagine que estamos em 2049. As cidades estão cada vez mais tecnológicas, mas também precisam ser sustentáveis. Qual futuro você gostaria de ajudar a construir?",
+        enunciado: "Ao pensar na sua futura carreira profissional, qual caminho você prefere seguir?",
         alternativas: [
             {
-                texto: "Uma cidade com carros elétricos, energia renovável, prédios inteligentes e muitas áreas verdes.",
-                afirmacao: "Você imagina um futuro em que a tecnologia e a preservação ambiental caminham juntas."
+                texto: "Trabalhar criando e aprimorando tecnologias inovadoras para resolver problemas da sociedade.",
+                afirmacao: "Você busca liderar a transformação tecnológica e construir as ferramentas do amanhã."
             },
             {
-                texto: "Uma cidade onde as pessoas utilizam menos recursos, consomem de forma consciente e cuidam mais da natureza.",
-                afirmacao: "Você acredita que um futuro sustentável depende tanto da tecnologia quanto das escolhas e atitudes das pessoas."
+                texto: "Utilizar as tecnologias existentes para potencializar meu trabalho em áreas humanas, artísticas ou sociais.",
+                afirmacao: "Você utiliza a inovação digital como um meio para ampliar o alcance do seu impacto humano."
             }
         ]
     }
@@ -116,7 +116,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Seu perfil em relação ao futuro:";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
