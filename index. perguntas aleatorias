@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,14 +8,34 @@
     <title>Você decide o futuro da IA</title>
 </head>
 <body>
+
     <div class="caixa-principal">
-        <h1>Você decide o futuro da IA</h1>
-        <div class="caixa-perguntas"></div>
-        <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-            <p class="texto-resultado"></p>
+
+        <div class="tela-inicial" id="inicio">
+            <div class="icone">🤖</div>
+            <h1>Você decide o<br>futuro da IA</h1>
+            <p>O futuro da inteligência artificial está em suas mãos!</p>
+            <button onclick="iniciarJogo()">COMEÇAR</button>
         </div>
+
+        <div class="jogo" id="jogo">
+            <h1>Você decide o futuro da IA</h1>
+
+            <p id="numero-pergunta"></p>
+
+            <div class="caixa-perguntas"></div>
+            <div class="caixa-alternativas"></div>
+
+            <div class="caixa-resultado">
+                <p class="texto-resultado"></p>
+                <button id="reiniciar" onclick="reiniciarJogo()">
+                    JOGAR NOVAMENTE
+                </button>
+            </div>
+        </div>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
