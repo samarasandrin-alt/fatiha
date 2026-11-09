@@ -45,8 +45,12 @@ const botaoReiniciar = document.getElementById("reiniciar");
 function iniciarJogo() {
     inicio.style.display = "none";
     jogo.style.display = "block";
+
     perguntaAtual = 0;
     respostas = [];
+
+    botaoReiniciar.style.display = "none";
+
     mostrarPergunta();
 }
 
@@ -63,7 +67,7 @@ function mostrarPergunta() {
     caixaPerguntas.textContent = pergunta.pergunta;
     caixaAlternativas.innerHTML = "";
 
-    pergunta.alternativas.forEach((alternativa, index) => {
+    pergunta.alternativas.forEach((alternativa) => {
         const botao = document.createElement("button");
 
         botao.textContent = alternativa;
@@ -90,13 +94,38 @@ function proximaPergunta() {
 function mostrarResultado() {
     caixaPerguntas.style.display = "none";
     caixaAlternativas.style.display = "none";
+
     numeroPergunta.textContent = "Fim das perguntas!";
 
     caixaResultado.style.display = "block";
 
-    textoResultado.textContent =
-        "Você concluiu o desafio! Suas escolhas ajudam a construir uma visão sobre o futuro da inteligência artificial. Lembre-se: o futuro da IA também depende das decisões humanas!";
-    
+    const positivas = [
+        perguntas[0].alternativas[0],
+        perguntas[1].alternativas[0],
+        perguntas[2].alternativas[0],
+        perguntas[3].alternativas[0]
+    ];
+
+    const totalPositivas = respostas.filter(resposta =>
+        positivas.includes(resposta)
+    ).length;
+
+    if (totalPositivas >= 3) {
+
+        textoResultado.textContent =
+            "Você acredita no potencial da inteligência artificial! Suas escolhas mostram que você vê a tecnologia como uma grande oportunidade para transformar o futuro, facilitar tarefas e trazer inovação para a sociedade.";
+
+    } else if (totalPositivas <= 1) {
+
+        textoResultado.textContent =
+            "Você tem uma visão cautelosa sobre a inteligência artificial! Suas escolhas mostram que você valoriza a participação humana e acredita que a tecnologia precisa de limites, cuidados e supervisão.";
+
+    } else {
+
+        textoResultado.textContent =
+            "Você tem uma visão equilibrada sobre a inteligência artificial! Suas escolhas mostram que reconhece os benefícios da tecnologia, mas também entende a importância dos cuidados e da responsabilidade em seu uso.";
+    }
+
     botaoReiniciar.style.display = "inline-block";
 }
 
